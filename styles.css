@@ -1,0 +1,249 @@
+/* styles.css */
+:root {
+  --fondo: #FFFFFF;
+  --dark: #261200;
+  --ligth: #FFF2E5;
+  --primario: #CE6300;
+  --gradiente: linear-gradient(180deg, #FFF 0%, #CE6300 55.83%);
+  }
+/* Estilos generales */
+body {
+    font-family:'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: var(--fondo);
+    color: var(--dark);
+    padding: 20px;
+    text-align: center; /* Centra horizontalmente */
+    position: relative;
+  }
+  
+  h1 {
+    margin: 0;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  h2 {
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  h3 {
+    margin: 0;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  #menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--dark);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #menu {
+    display: none;
+  }
+  /* #menu.open {
+    display: block;
+  } */
+  /* Estilos para la superposición */
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .overlay.show {
+    display: block;
+  }
+  
+  #menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #menu ul li {
+    margin-bottom: 10px;
+  }
+  
+  #menu ul li a {
+    color: var(--dark);
+    text-decoration: none;
+  }
+  /* Contenido principal */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: var(--fondo);
+  }
+  /* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  } */
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    margin-bottom: 250px;
+  }
+  
+  .animated {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .animated img {
+    max-width: 80%;
+    height: auto;
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+  
+  .animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+/* .aboutme {
+  text-align: center;
+} */
+.aboutme {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.work {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact ul li a{
+  color: var(--dark);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px 0 25px;
+  
+}
+.contact img {
+  margin: 5px;
+}
+
+
+
+
+  /* Pie de página */
+  footer {
+    background-color: var(--fondo);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  
+  .social-icons li a img {
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+/* Media queries para pantallas de 1024px o más */
+@media screen and (min-width: 1024px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  
+    #menu-toggle {
+      display: none;
+    }
+  
+    #menu {
+      display: block;
+    }
+  
+    #menu ul {
+      display: flex;
+    }
+  
+    #menu ul li {
+      margin-right: 20px;
+    }
+  }
